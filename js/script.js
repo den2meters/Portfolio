@@ -1,13 +1,13 @@
 "use strict"
 
-const btn = document.querySelector('.why__arrow');
-const text = document.querySelector('.why__text');
+// const btn = document.querySelector('.why__arrow');
+// const text = document.querySelector('.why__text');
 
 
-btn.addEventListener('click', function () {
-   text.classList.toggle('why__text-active');
-   btn.classList.toggle('why__arrow-active');
-})
+// btn.addEventListener('click', function () {
+//    text.classList.toggle('why__text-active');
+//    btn.classList.toggle('why__arrow-active');
+// })
 
 function slider() {
    const btnLeft = document.querySelector('.personal-info__left');
