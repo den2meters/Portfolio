@@ -10,12 +10,12 @@
 // })
 
 function slider() {
-   const btnLeft = document.querySelector('.personal-info__left');
-   const btnRight = document.querySelector('.personal-info__right');
-   const line = document.querySelector('.personal-info__column');
-   const widthSlide = document.querySelectorAll('.personal-info__item');
+   const btnLeft = document.querySelector('.skills__left');
+   const btnRight = document.querySelector('.skills__right');
+   const line = document.querySelector('.skills__column');
+   const widthSlide = document.querySelectorAll('.skills__item');
    const slidesArray = Array.from(widthSlide);
-   const points = Array.from(document.querySelectorAll('.personal-info__point'));
+   const points = Array.from(document.querySelectorAll('.skills__point'));
 
    let width;
    let count = 0;
@@ -23,8 +23,6 @@ function slider() {
    btnRight.addEventListener('click', function () {
       init();
       count++;
-      console.log(count);
-      
       
       if (count > slidesArray.length - 3) {
          count = slidesArray.length - 3;
@@ -33,9 +31,9 @@ function slider() {
       }
       for (let index in points) {
          if (index == count) {
-            points[index].classList.add('personal-info__point-active');
+            points[index].classList.add('skills__point-active');
          } else {
-            points[index].classList.remove('personal-info__point-active');
+            points[index].classList.remove('skills__point-active');
          }
       }
    })
@@ -43,7 +41,6 @@ function slider() {
    btnLeft.addEventListener('click', function () {
       init();
       count--;
-      console.log(count);
       if (count < 0) {
          count = 0;
       } else {
@@ -51,9 +48,9 @@ function slider() {
       }
       for (let index in points) {
          if (index == count) {
-            points[index].classList.add('personal-info__point-active');
+            points[index].classList.add('skills__point-active');
          } else {
-            points[index].classList.remove('personal-info__point-active');
+            points[index].classList.remove('skills__point-active');
          }
       }
    })
