@@ -1,13 +1,5 @@
 "use strict"
 
-// const btn = document.querySelector('.why__arrow');
-// const text = document.querySelector('.why__text');
-
-
-// btn.addEventListener('click', function () {
-//    text.classList.toggle('why__text-active');
-//    btn.classList.toggle('why__arrow-active');
-// })
 
 function slider() {
    const btnLeft = document.querySelector('.skills__left');
@@ -80,20 +72,12 @@ blinking();
 
 function imageAnimation(exempl) {
    const imagePc = exempl.querySelector('.projects__image-animation-pc');
-   const imagePhone = exempl.querySelector('.projects__image-animation-phone');
    const imageArrayPc = Array.from(imagePc.querySelectorAll('.projects__image-item'));
-   const imageArrayPhone = Array.from(imagePhone.querySelectorAll('.projects__image-item'));
 
-   let width;
    let count = 0;
 
    function timer() {
-      init();
-      if (width > 767) {
-         classAdder(imageArrayPc);
-      } else {
-         classAdder(imageArrayPhone);
-      }
+      classAdder(imageArrayPc);
    }
 
    function classAdder(elem) {
@@ -110,11 +94,28 @@ function imageAnimation(exempl) {
          
       }
    }
-   setInterval(timer, 8000);
-
-   window.addEventListener('resize', init );
-   function init() {
-      width = window.innerWidth
-   }
-   init();
+   setInterval(timer, 7000);
 }
+
+
+function showHide() {
+   let showHideButton = document.querySelector('.projects__show-hide');
+   let box = document.querySelector('.projects__box-container');
+   const exmpls = Array.from(document.querySelectorAll('.projects__exmpl'));
+   console.log(exmpls);
+   showHideButton.addEventListener('click', () => {
+      showHideButton.textContent == 'Show more' ? showHideButton.textContent = 'Show less' : showHideButton.textContent = 'Show more';;
+      for (let i = 0; i < exmpls.length; i++){
+         if (
+            exmpls[i].classList.contains('projects__exmpl-7') || 
+            exmpls[i].classList.contains('projects__exmpl-8') ||
+            exmpls[i].classList.contains('projects__exmpl-9')
+         ) {
+            exmpls[i].classList.toggle('projects__exmpl-none');
+         }
+      }
+      box.classList.toggle('projects__box-container-hide')
+   })
+}
+
+showHide();
