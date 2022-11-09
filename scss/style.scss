@@ -343,13 +343,10 @@ body {
    }
 
    &__item {
-      padding: 0px 30px;
-
-      @media(max-width: 1441px) {
-         padding: 0px 20px;
-      }
+      padding: 0px 20px;
 
       @media(max-width: 1271px) {
+         padding: 0px 15px;
          font-size: 10px;
       }
 
@@ -734,7 +731,8 @@ body {
             "exempl-6"
             "exempl-7"
             "exempl-8"
-            "exempl-9";
+            "exempl-9"
+            "exempl-10";
       row-gap: 70px;
       @media (max-width: 769px) {
          row-gap: 50px;

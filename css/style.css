@@ -561,17 +561,12 @@ body {
 }
 
 .skills__item {
-  padding: 0px 30px;
-}
-
-@media (max-width: 1441px) {
-  .skills__item {
-    padding: 0px 20px;
-  }
+  padding: 0px 20px;
 }
 
 @media (max-width: 1271px) {
   .skills__item {
+    padding: 0px 15px;
     font-size: 10px;
   }
 }
@@ -1093,7 +1088,7 @@ body {
       grid-template-columns: repeat(1, 1fr);
   -ms-grid-rows: (1fr)[1];
       grid-template-rows: repeat(1, 1fr);
-      grid-template-areas: "exempl-1"  "exempl-2" "exempl-3" "exempl-4" "exempl-5" "exempl-6" "exempl-7" "exempl-8" "exempl-9";
+      grid-template-areas: "exempl-1"  "exempl-2" "exempl-3" "exempl-4" "exempl-5" "exempl-6" "exempl-7" "exempl-8" "exempl-9" "exempl-10";
   row-gap: 70px;
 }
 

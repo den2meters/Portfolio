@@ -109,7 +109,8 @@ function showHide() {
          if (
             exmpls[i].classList.contains('projects__exmpl-7') || 
             exmpls[i].classList.contains('projects__exmpl-8') ||
-            exmpls[i].classList.contains('projects__exmpl-9')
+            exmpls[i].classList.contains('projects__exmpl-9') ||
+            exmpls[i].classList.contains('projects__exmpl-10')
          ) {
             exmpls[i].classList.toggle('projects__exmpl-none');
          }
